@@ -136,7 +136,7 @@ public class TripRecyclerViewAdapter extends RecyclerView.Adapter<TripRecyclerVi
                         Trip trip = trips.get(getAdapterPosition());
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("trip", trip);
-                        Navigation.findNavController(view).navigate(R.id.action_home_to_addExpense, bundle);
+//                        Navigation.findNavController(view).navigate(R.id.action_home_to_addExpense, bundle);
 
             });
 
