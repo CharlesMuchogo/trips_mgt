@@ -10,11 +10,12 @@ import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
 
 @Database(
-        entities = {Trip.class },
-        version = 1
+        entities = {Trip.class , Expense.class},
+        version = 3
 )
 public abstract class AppDatabase extends RoomDatabase {
-    public abstract TripDao patientDao();
+    public abstract TripDao TripDao();
+    public  abstract  ExpenseDao ExpenseDao();
 
 
     @Override

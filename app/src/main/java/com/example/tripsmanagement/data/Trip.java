@@ -24,8 +24,8 @@ public class Trip implements Serializable {
     @ColumnInfo(name = "risk_assessment")
     public  String risk_assessment = "No";
 
-    @ColumnInfo(name = "phoneNumber")
-    public String phoneNumber;
+    @ColumnInfo(name = "description")
+    public String description;
 
     @ColumnInfo(name = "dateCreated")
     public String dateCreated;
@@ -70,12 +70,12 @@ public class Trip implements Serializable {
         this.risk_assessment = risk_assessment;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getDescription() {
+        return description;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getDateCreated() {

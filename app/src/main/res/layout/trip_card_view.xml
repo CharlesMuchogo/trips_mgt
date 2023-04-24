@@ -37,7 +37,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/patientName"
+                    android:id="@+id/tripName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -45,7 +45,7 @@
                      />
 
                 <TextView
-                    android:id="@+id/patientAge"
+                    android:id="@+id/destination"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/whiteGrey"
@@ -54,7 +54,7 @@
                     tools:ignore="SmallSp" />
 
                 <TextView
-                    android:id="@+id/patientAdmissionDate"
+                    android:id="@+id/tripDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/whiteGrey"
@@ -75,7 +75,7 @@
 
 
         <ImageView
-            android:id="@+id/dischargePatient"
+            android:id="@+id/deleteTrip"
             android:layout_width="40dp"
             android:paddingRight="15dp"
             android:layout_height="match_parent"

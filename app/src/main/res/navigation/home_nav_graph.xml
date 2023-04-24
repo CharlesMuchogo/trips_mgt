@@ -11,10 +11,39 @@
         android:name="com.example.tripsmanagement.presentation.HomeFragment"
         tools:layout="@layout/fragment_home"
         android:label="HomeFragment" >
-<!--        <action-->
-<!--            android:id="@+id/action_homeFragment_to_addPatientFragment"-->
-<!--            app:popUpTo="@id/homeFragment"-->
-<!--            app:destination="@id/addPatientFragment" />-->
+        <action
+            android:id="@+id/action_homeFragment_to_addTripFragment"
+            app:popUpTo="@id/homeFragment"
+            app:destination="@id/addTripFragment" />
+        <action
+            android:id="@+id/action_home_to_addExpense"
+            app:popUpTo="@id/homeFragment"
+            app:destination="@id/addExpenseFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addTripFragment"
+        android:name="com.example.tripsmanagement.presentation.AddTripFragment"
+        tools:layout="@layout/fragment_home"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_addPatientFragment_to_homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:destination="@id/homeFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addExpenseFragment"
+        android:name="com.example.tripsmanagement.presentation.ExpenseFragment"
+        tools:layout="@layout/fragment_home"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_addExpenseFragment_to_homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:destination="@id/homeFragment" />
+
 
     </fragment>
 

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.AddTripFragment">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_trip_name"/>
+
+        <EditText
+            android:id="@+id/destination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="@string/enter_destination"/>
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="@string/trip_description"/>
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_radius"
+            android:backgroundTint="#f1f1f1"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingHorizontal="10dp"
+            android:textColorHint="@color/grey"
+            android:textSize="15sp"
+            android:hint="@string/click_here_to_select_trip_date"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/requires_risk_assesment"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_Trip"
+            android:layout_width="match_parent"
+            android:layout_marginTop="35dp"
+            android:layout_height="35dp"
+            android:layout_marginVertical="10dp"
+            android:elevation="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/save"
+            android:textAllCaps="false"
+             />
+
+        <ProgressBar
+            android:id="@+id/addTripProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+
+</FrameLayout>
