@@ -1,75 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".presentation.AddTripFragment">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+
+
+    <TextView
+        android:id="@+id/expenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Trip Expenses"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tripsView"
+        android:layout_below="@+id/expenses"
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="70dp"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="match_parent" />
 
 
-        <EditText
-            android:id="@+id/amount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:inputType="number"
-            android:hint="@string/enter_amount_of_expense"/>
-        <EditText
-            android:id="@+id/comments"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:hint="@string/enter_additional_comments"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/add_icon"
+        android:contentDescription="@string/add" />
 
-        <EditText
-            android:id="@+id/date"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/background_radius"
-            android:backgroundTint="#f1f1f1"
-            android:clickable="false"
-            android:cursorVisible="false"
-            android:focusable="false"
-            android:focusableInTouchMode="false"
-            android:paddingHorizontal="10dp"
-            android:textColorHint="@color/grey"
-            android:textSize="15sp"
-            android:hint="@string/click_to_add_trip_expense"
-            android:importantForAutofill="no"
-            tools:ignore="LabelFor" />
+</RelativeLayout>
 
-        <Spinner
-            android:id="@+id/my_spinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/save_expense"
-            android:layout_width="match_parent"
-            android:layout_marginTop="35dp"
-            android:layout_height="35dp"
-            android:layout_marginVertical="10dp"
-            android:elevation="0dp"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:text="@string/save"
-            android:textAllCaps="false"
-            />
-
-
-
-    </LinearLayout>
-
-
-</FrameLayout>

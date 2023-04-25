@@ -133,10 +133,10 @@ public class TripRecyclerViewAdapter extends RecyclerView.Adapter<TripRecyclerVi
             deleteTrip = itemView.findViewById(R.id.deleteTrip);
 
             itemView.setOnClickListener(view -> {
-                        Trip trip = trips.get(getAdapterPosition());
-                        Bundle bundle = new Bundle();
-                        bundle.putSerializable("trip", trip);
-//                        Navigation.findNavController(view).navigate(R.id.action_home_to_addExpense, bundle);
+                Trip trip = trips.get(getAdapterPosition());
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("trip", trip);
+                        Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_ExpenseFragment, bundle);
 
             });
 
@@ -151,7 +151,6 @@ public class TripRecyclerViewAdapter extends RecyclerView.Adapter<TripRecyclerVi
                     Trip trip = trips.get(getAdapterPosition());
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("trip", trip);
-                    Navigation.findNavController(view).navigate(R.id.action_home_to_addExpense, bundle);
                     break;
             }
         }

@@ -2,12 +2,19 @@ package com.example.tripsmanagement.data;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "Expense")
+@Entity(tableName = "Expense", foreignKeys = @ForeignKey(entity = Trip.class,
+        parentColumns = "id",
+        childColumns = "trip_id",
+        onDelete = ForeignKey.CASCADE))
+
 public class Expense {
     @PrimaryKey(autoGenerate = true)
     public int id;
+    @ColumnInfo(name = "trip_id")
+    public int trip_id;
 
     @ColumnInfo(name = "expense_type")
     public String expense_type;
@@ -18,6 +25,14 @@ public class Expense {
     @ColumnInfo(name = "additional_comments")
     public String additional_comments;
 
+
+    public int getTrip_id() {
+        return trip_id;
+    }
+
+    public void setTrip_id(int trip_id) {
+        this.trip_id = trip_id;
+    }
     public int getId() {
         return id;
     }

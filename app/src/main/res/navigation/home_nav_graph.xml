@@ -15,10 +15,29 @@
             android:id="@+id/action_homeFragment_to_addTripFragment"
             app:popUpTo="@id/homeFragment"
             app:destination="@id/addTripFragment" />
+
         <action
-            android:id="@+id/action_home_to_addExpense"
+            android:id="@+id/action_homeFragment_to_ExpenseFragment"
             app:popUpTo="@id/homeFragment"
-            app:destination="@id/addExpenseFragment" />
+            app:destination="@id/expenseFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/expenseFragment"
+        android:name="com.example.tripsmanagement.presentation.ExpenseFragment"
+        tools:layout="@layout/fragment_expense"
+        android:label="ExpenseFragment" >
+        <action
+            android:id="@+id/action_ExpenseFragment_to_homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_ExpenseFragment_to_addExpenseFragment"
+            app:popUpTo="@id/addexpenseFragment"
+            app:destination="@id/addexpenseFragment" />
+
 
     </fragment>
     <fragment
@@ -35,16 +54,23 @@
     </fragment>
 
     <fragment
-        android:id="@+id/addExpenseFragment"
-        android:name="com.example.tripsmanagement.presentation.ExpenseFragment"
-        tools:layout="@layout/fragment_home"
-        android:label="HomeFragment" >
+        android:id="@+id/addexpenseFragment"
+        android:name="com.example.tripsmanagement.presentation.AddExpenseFragment"
+        tools:layout="@layout/fragment_expense"
+        android:label="ExpenseFragment" >
         <action
-            android:id="@+id/action_addExpenseFragment_to_homeFragment"
+            android:id="@+id/action_AddExpenseFragment_to_homeFragment"
             app:popUpTo="@id/homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/expenseFragment" />
+
+        <action
+            android:id="@+id/action_addExpenseFragment_to_expenseFragment"
+            app:popUpTo="@id/homeFragment"
+            app:destination="@id/expenseFragment" />
 
 
     </fragment>
+
+
 
 </navigation>

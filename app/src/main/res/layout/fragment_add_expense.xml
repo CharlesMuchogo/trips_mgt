@@ -17,31 +17,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Add A Trip"
+            android:text="Add An Expense"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/black"
             />
 
-        <EditText
-            android:id="@+id/name"
+        <Spinner
+            android:id="@+id/expenseType"
+            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:hint="@string/enter_trip_name"/>
+            />
 
         <EditText
-            android:id="@+id/destination"
+            android:id="@+id/amount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:layout_marginTop="30dp"
-            android:hint="@string/enter_destination"/>
+            android:hint="Enter trip amount"/>
         <EditText
-            android:id="@+id/description"
+            android:id="@+id/comments"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:hint="@string/trip_description"/>
+            android:hint="@string/enter_additional_comments"/>
 
         <EditText
             android:id="@+id/date"
@@ -58,19 +59,13 @@
             android:paddingHorizontal="10dp"
             android:textColorHint="@color/grey"
             android:textSize="15sp"
-            android:hint="@string/click_here_to_select_trip_date"
+            android:hint="Click to add expense time"
             android:importantForAutofill="no"
             tools:ignore="LabelFor" />
 
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/requires_risk_assesment"/>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/save_Trip"
+            android:id="@+id/save_Expense"
             android:layout_width="match_parent"
             android:layout_marginTop="35dp"
             android:layout_height="35dp"
@@ -80,7 +75,7 @@
             android:insetBottom="0dp"
             android:text="@string/save"
             android:textAllCaps="false"
-             />
+            />
 
         <ProgressBar
             android:id="@+id/addTripProgressBar"

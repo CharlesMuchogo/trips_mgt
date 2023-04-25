@@ -12,6 +12,9 @@ public interface ExpenseDao {
     @Query("SELECT * FROM Expense ORDER BY id DESC")
     List<Expense> getAll();
 
+    @Query("SELECT * FROM Expense WHERE trip_id= :tripId ORDER BY id DESC")
+    List<Expense> getAllTripExpenses(int tripId);
+
     @Query("DELETE FROM Expense WHERE id= :expenseId")
     void delete(int expenseId);
 

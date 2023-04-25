@@ -1,0 +1,8 @@
+<resources>
+    <string-array name="num_fetus_array">
+        <item>N/A</item>
+        <item>Food</item>
+        <item>Travel</item>
+        <item>Other</item>
+    </string-array>
+</resources>

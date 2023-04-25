@@ -11,7 +11,7 @@ import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
 @Database(
         entities = {Trip.class , Expense.class},
-        version = 3
+        version = 4
 )
 public abstract class AppDatabase extends RoomDatabase {
     public abstract TripDao TripDao();

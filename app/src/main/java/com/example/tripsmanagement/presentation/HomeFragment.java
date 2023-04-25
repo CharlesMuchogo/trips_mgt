@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.tripsmanagement.R;
 import com.example.tripsmanagement.data.DatabaseClient;
+import com.example.tripsmanagement.data.ExportData;
 import com.example.tripsmanagement.data.Trip;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -62,6 +63,9 @@ public class HomeFragment extends Fragment {
                 adapter.getFilter().filter(s);
 
 
+
+
+
                 return false;
             }
         });
@@ -88,7 +92,8 @@ public class HomeFragment extends Fragment {
                 recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
                 TripRecyclerViewAdapter adapter = new TripRecyclerViewAdapter(requireContext(), trips);
                 recyclerView.setAdapter(adapter);
-
+                ExportData exportData = new ExportData();
+                exportData.exportData(requireContext());
             }
         }
         GetTrips getTrips = new GetTrips();

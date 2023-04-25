@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/background_radius">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/expense_background"/>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:paddingHorizontal="20dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/expenseType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/Amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/whiteGrey"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/expenseTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/whiteGrey"
+                android:layout_marginTop="10dp"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+                android:text="@string/_25th_march_2022"
+                android:backgroundTint="#20000000"
+                android:padding="10dp"
+                android:background="@drawable/background_radius"
+                android:drawablePadding="10dp"
+                app:drawableLeftCompat="@drawable/ic_time"
+                app:drawableTint="@color/white"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+
+        />
+
+
+        <ImageView
+            android:id="@+id/deleteExpense"
+            android:layout_width="40dp"
+            android:paddingRight="15dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_delete_24"
+            app:tint="@color/white"
+            android:alpha=".8"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+</layout>
